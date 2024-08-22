@@ -110,7 +110,7 @@ body {
 }
 
 .sub01_s1 {
-    background-image: url("/img/main_img.png");
+    background-image: url("img/main_img.png");
     background-repeat: no-repeat;
 }
 
@@ -475,7 +475,7 @@ body {
         }
     
         .sub01_s1 {
-            background-image: url("/img/main_media_img.png");
+            background-image: url("img/main_media_img.png");
             background-repeat: no-repeat;
             /* background-size: 100%; */
         }
@@ -612,7 +612,7 @@ body {
     }
 
     .sub01_s1 {
-        background-image: url("/img/main_media_img01.png");
+        background-image: url("img/main_media_img01.png");
         background-repeat: no-repeat;
     }
 
