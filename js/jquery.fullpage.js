@@ -6,51 +6,109 @@
 
 
 /*------------------------------------------*/
+// $(window).ready(function() {
+// 	$(function() {
+// 		$.scrollify({
+// 			section: ".section",
+// 			scrollbars: false,
+// 			interstitialSection: "",
+// 			easing: "easeOutExpo",
+// 			scrollSpeed: 900,
+// 			offset: 0,
+// 			standardScrollElements: "",
+// 			setHeights: true,
+// 			overflowScroll: true,
+// 			updateHash: true,
+// 			touchScroll: true,
+// 			before: function(i, panels) {
+// 				var ref = panels[i].attr("data-section-name");
+// 			  $(".pagination .active").removeClass("active");
+// 			  $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+// 			},
+// 			after: function(i, panels) {
+// 				var ref = panels[i].attr("data-section-name");
+// 				if (ref === "sub01_s1") {
+// 				};
+// 				if (ref === "sub01_s2") {
+// 				};
+// 				if (ref === "sub01_s3") {
+// 				};
+// 			},
+// 			afterRender: function() {
+// 				var pagination = "<ul class=\"pagination\">";
+// 				var activeClass = "";
+// 				$(".section").each(function(i) {
+// 					activeClass = "";
+// 					if(i===$.scrollify.currentIndex()) {
+// 					  activeClass = "active";
+// 					}
+// 					pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+// 				});
+// 				pagination += "</ul>";
+// 				$(".sub01_s1").append(pagination);
+// 				$(".pagination a").on("click",$.scrollify.move);
+// 				$(".scroll_down").on("click",$.scrollify.move);
+// 			}
+// 		});
+// 	});
+
+// });
+// $(window).trigger('resize');
+
 $(window).ready(function() {
 	$(function() {
-		$.scrollify({
-			section: ".section",
-			scrollbars: false,
-			interstitialSection: "",
-			easing: "easeOutExpo",
-			scrollSpeed: 900,
-			offset: 0,
-			standardScrollElements: "",
-			setHeights: true,
-			overflowScroll: true,
-			updateHash: true,
-			touchScroll: true,
-			before: function(i, panels) {
-				var ref = panels[i].attr("data-section-name");
-			  $(".pagination .active").removeClass("active");
-			  $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-			},
-			after: function(i, panels) {
-				var ref = panels[i].attr("data-section-name");
-				if (ref === "sub01_s1") {
-				};
-				if (ref === "sub01_s2") {
-				};
-				if (ref === "sub01_s3") {
-				};
-			},
-			afterRender: function() {
-				var pagination = "<ul class=\"pagination\">";
-				var activeClass = "";
-				$(".section").each(function(i) {
-					activeClass = "";
-					if(i===$.scrollify.currentIndex()) {
-					  activeClass = "active";
+			$.scrollify({
+					section: ".section",
+					scrollbars: false,
+					interstitialSection: "",
+					easing: "easeOutExpo",
+					scrollSpeed: 900,
+					offset: 0,
+					standardScrollElements: "",
+					setHeights: true,
+					overflowScroll: true,
+					updateHash: true,
+					touchScroll: true,
+					before: function(i, panels) {
+							var ref = panels[i].attr("data-section-name");
+							$(".pagination .active").removeClass("active");
+							$(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+					},
+					after: function(i, panels) {
+							var ref = panels[i].attr("data-section-name");
+							if (ref === "sub01_s1") {
+									// Add functionality here
+							}
+							if (ref === "sub01_s2") {
+									// Add functionality here
+							}
+							if (ref === "sub01_s3") {
+									// Add functionality here
+							}
+					},
+					afterRender: function() {
+							var pagination = "<ul class=\"pagination\">";
+							var activeClass = "";
+							$(".section").each(function(i) {
+									activeClass = "";
+									if(i === $.scrollify.currentIndex()) {
+											activeClass = "active";
+									}
+									pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+							});
+							pagination += "</ul>";
+							$(".sub01_s1").append(pagination);
+							$(".pagination a").on("click", function(event) {
+									event.preventDefault();
+									$.scrollify.move($(this).attr("href"));
+							});
+							$(".scroll_down").on("click", function(event) {
+									event.preventDefault();
+									$.scrollify.next();
+							});
 					}
-					pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-				});
-				pagination += "</ul>";
-				$(".sub01_s1").append(pagination);
-				$(".pagination a").on("click",$.scrollify.move);
-				$(".scroll_down").on("click",$.scrollify.move);
-			}
-		});
+			});
 	});
-
 });
 $(window).trigger('resize');
+
