@@ -324,19 +324,46 @@ body {
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15); */
 }
 
-.swiper-button-prev {
-    background-image: url("img/chevron-left-solid.png");
-    opacity: 20%;
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* 크기를 픽셀 단위로 조정 */
+    height: 40px; /* 크기를 픽셀 단위로 조정 */
+    background-size: contain; /* 배경 이미지 크기 조정 */
+    background-repeat: no-repeat;
+    opacity: 0.2; /* 투명도 조정 (0-1 사이) */
+    z-index: 10; /* 다른 요소 위에 표시되도록 설정 */
 }
+
+.swiper-button-prev {
+    left: 10px; /* 왼쪽 위치 조정 */
+    background-image: url("img/chevron-left-solid.png");
+}
+
+.swiper-button-next {
+    right: 10px; /* 오른쪽 위치 조정 */
+    background-image: url("img/chevron-right-solid.png");
+}
+
+/* .swiper-button-prev {
+    background-repeat: no-repeat;
+    background-image: url("img/chevron-left-solid.png");
+    width: 40%;
+    opacity: 20%;
+} */
 
 /* .swiper-button-prev:hover {
     background-image: url("../svg/icon-arrow-left-w.svg");
 } */
 
-.swiper-button-next {
+/* .swiper-button-next {
+    background-repeat: no-repeat;
     background-image: url("img/chevron-right-solid.png");
+    width: 40%;
+
     opacity: 20%;
-}
+} */
 
 /* .swiper-button-next:hover {
     background-image: url("../svg/icon-arrow-right-w.svg");
