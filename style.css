@@ -325,7 +325,7 @@ body {
 }
 
 .swiper-button-prev {
-    background-image: url("../svg/chevron-left-solid.svg");
+    background-image: url("img/chevron-left-solid.png");
     opacity: 20%;
 }
 
@@ -334,7 +334,7 @@ body {
 } */
 
 .swiper-button-next {
-    background-image: url("../svg/chevron-right-solid.svg");
+    background-image: url("img/chevron-right-solid.png");
     opacity: 20%;
 }
 
